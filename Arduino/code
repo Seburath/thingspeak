@@ -1,0 +1,10 @@
+readChannelID = 93156;
+fieldID1 = 1;
+
+readAPIKey = 'MCI6XM81ZFOY8UCE';
+
+%% Read Data %%
+[data, time] = thingSpeakRead(readChannelID, 'Field', fieldID1, 'NumPoints', 10, 'ReadKey', readAPIKey);
+
+%% Visualize Data %%
+thingSpeakPlot(time, data);
